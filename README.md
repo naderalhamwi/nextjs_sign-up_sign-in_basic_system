@@ -21,3 +21,13 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+Tech used in this project 
+nextjs 14.2.30
+bcryptjs 3.0.2
+mysql2 3.14.1
+prisma 6.11.0
+@prisma/client 6.11.0
+next-auth 4.24.11
+jsonwebtoken 9.0.2
+@types/jsonwebtoken 9.0.10
