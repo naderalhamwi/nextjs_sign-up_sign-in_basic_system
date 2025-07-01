@@ -42,18 +42,15 @@ export default function Dashboard() {
   };
 
   return (
-    <div>
-      <h1>Welcome, {user.name}</h1>
-      <p>Email: {user.email}</p>
-      <h2>Your Posts:</h2>
-      <ul>
-        {user.posts.map((post) => (
-          <li key={post.id}>
-            <strong>{post.title}</strong>: {post.content}
-          </li>
-        ))}
-      </ul>
-      <button onClick={logout}>Sign Out</button>
+    <div className="h-screen flex flex-col items-center justify-center">
+      <h1 className="text-2xl">Welcome, {user.name}</h1>
+      <p>User Email {user.email}</p>
+      <button
+        className="block p-1 text-white bg-red-600 rounded-lg w-36 mb-6 mt-3 hover:bg-red-700"
+        onClick={logout}
+      >
+        Sign Out
+      </button>
     </div>
   );
 }

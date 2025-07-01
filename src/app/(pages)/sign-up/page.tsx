@@ -26,23 +26,42 @@ export default function Signup() {
   };
 
   return (
-    <form onSubmit={submit}>
+    <form
+      className="flex flex-col justify-center items-center h-screen"
+      onSubmit={submit}
+    >
       <input
+        className="border-b bg-neutral-950 p-3 mb-6"
         placeholder="Name"
         onChange={(e) => setForm({ ...form, name: e.target.value })}
+        required
       />
       <input
+        className="border-b bg-neutral-950 p-3 mb-6"
         placeholder="Email"
         onChange={(e) => setForm({ ...form, email: e.target.value })}
+        required
       />
       <input
+        className="border-b bg-neutral-950 p-3 mb-6"
         placeholder="Password"
         type="password"
         onChange={(e) => setForm({ ...form, password: e.target.value })}
+        required
       />
-      <button type="submit">Sign Up</button>
-      <br />
-      <Link href="/sign-in">Sign In</Link>
+      <button
+        className="block p-2 text-white bg-green-600 rounded-lg w-36 mb-6 mt-3 hover:bg-green-700"
+        type="submit"
+      >
+        Sign Up
+      </button>
+      <Link href="/sign-in">
+        <p className="text-neutral-400">
+          Already have an account?{" "}
+          <span className="text-blue-600 hover:text-blue-700">Sign in</span>{" "}
+          instead
+        </p>
+      </Link>
     </form>
   );
 }

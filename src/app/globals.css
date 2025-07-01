@@ -25,3 +25,11 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer utilities {
+  input:-webkit-autofill {
+    @apply bg-black text-black;
+    box-shadow: 0 0 0px 1000px rgb(22, 22, 22) inset;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+  }
+}

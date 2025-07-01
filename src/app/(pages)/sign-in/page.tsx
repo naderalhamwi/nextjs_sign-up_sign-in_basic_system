@@ -44,20 +44,39 @@ export default function Login() {
   };
 
   return (
-    <form onSubmit={submit}>
+    <form
+      className="flex flex-col justify-center items-center h-screen"
+      onSubmit={submit}
+    >
       <input
-        placeholder="Email"
+        className="border-b bg-neutral-950 p-3 mb-6"
+        name="email"
+        placeholder="Your Email Address"
         onChange={(e) => setForm({ ...form, email: e.target.value })}
+        required
       />
       <input
-        placeholder="Password"
+        className="border-b bg-neutral-950 p-3 mb-6"
+        name="password"
+        placeholder="Your Password"
         type="password"
         onChange={(e) => setForm({ ...form, password: e.target.value })}
+        required
       />
-      <button type="submit">Sign In</button>
-      <br />
       <p className="text-red-400">{errMessage}</p>
-      <Link href="/sign-up">Sign up</Link>
+      <button
+        className="block p-2 text-white bg-green-600 rounded-lg w-36 mb-6 mt-3 hover:bg-green-700"
+        type="submit"
+      >
+        Sign In
+      </button>
+      <Link href="/sign-up">
+        <p className="text-neutral-400">
+          Don&apos;t have an account?{" "}
+          <span className="text-blue-600 hover:text-blue-700">Sign up</span>{" "}
+          instead
+        </p>
+      </Link>
     </form>
   );
 }
