@@ -14,7 +14,6 @@ export async function POST() {
     };
     const user = await prisma.user.findUnique({
       where: { id: payload.userId },
-      include: { posts: true },
     });
     return NextResponse.json(user, { status: 200 });
   } catch (e) {
